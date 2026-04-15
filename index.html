@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Style Studio Hair Salon | Professional Hair Salons in Durban</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        html { scroll-behavior: smooth; }
+        body { font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif; line-height: 1.7; color: #1a1a1a; background: #ffffff; }
+        .container { max-width: 1200px; margin: 0 auto; padding: 0 24px; }
+        
+        /* Demo Notice */
+        .demo-notice { background: #1e40af; color: white; padding: 12px; text-align: center; font-size: 0.9rem; font-weight: 500; }
+        .demo-notice a { color: #fbbf24; font-weight: 600; text-decoration: underline; }
+        
+        /* Header */
+        header { background: #1e3a8a; color: white; padding: 100px 0 80px; text-align: center; position: relative; }
+        
+        header .container { position: relative; z-index: 1; }
+        header h1 { font-size: 3.5rem; font-weight: 700; margin-bottom: 16px; letter-spacing: -0.02em; }
+        header p { font-size: 1.4rem; opacity: 0.95; font-weight: 300; }
+        
+        /* CTA Buttons */
+        .cta-container { margin-top: 40px; display: flex; gap: 16px; justify-content: center; flex-wrap: wrap; }
+        .cta-btn { display: inline-flex; align-items: center; gap: 10px; background: #2563eb; color: white; padding: 16px 32px; 
+                    text-decoration: none; border-radius: 8px; font-weight: 600; font-size: 1.1rem;
+                    transition: background 0.2s ease; border: none; }
+        .cta-btn:hover { background: #1d4ed8; }
+        .cta-phone { background: #16a34a; }
+        .cta-phone:hover { background: #15803d; }
+        .cta-whatsapp { background: #128c7e; }
+        .cta-whatsapp:hover { background: #0f766e; }
+        
+        /* Trust Signals */
+        .trust-signals { display: flex; gap: 30px; justify-content: center; margin-top: 30px; flex-wrap: wrap; }
+        .trust-item { display: flex; align-items: center; gap: 8px; font-size: 1rem; opacity: 0.9; }
+        
+        /* Services */
+        .services { padding: 100px 0; background: linear-gradient(180deg, #ffffff 0%, #f8fafc 100%); }
+        .section-header { text-align: center; margin-bottom: 60px; }
+        .section-header h2 { font-size: 2.5rem; font-weight: 700; color: #1e3a8a; margin-bottom: 12px; }
+        .service-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); gap: 32px; }
+        .service-card { background: white; padding: 40px; border-radius: 20px; text-align: center; 
+                        box-shadow: 0 4px 20px rgba(0,0,0,0.06); transition: all 0.4s ease; border: 1px solid #e5e7eb; }
+        .service-card:hover { transform: translateY(-8px); box-shadow: 0 12px 40px rgba(0,0,0,0.12); }
+        .service-icon { font-size: 4rem; margin-bottom: 20px; }
+        .service-card h3 { color: #1e3a8a; font-size: 1.4rem; font-weight: 600; margin-bottom: 12px; }
+        .service-card p { color: #64748b; font-size: 1.05rem; line-height: 1.6; }
+        
+        /* About */
+        .about { padding: 100px 0; }
+        .about-content { display: grid; grid-template-columns: 1fr 1fr; gap: 60px; align-items: center; }
+        .about h2 { color: #1e3a8a; font-size: 2.5rem; font-weight: 700; margin-bottom: 24px; }
+        .about p { color: #475569; font-size: 1.15rem; margin-bottom: 20px; }
+        .checklist { margin-top: 32px; }
+        .checklist-item { display: flex; align-items: center; gap: 12px; margin-bottom: 16px; color: #334155; font-size: 1.1rem; }
+        .checklist-item::before { content: '✓'; display: inline-flex; align-items: center; justify-content: center; 
+                                    width: 28px; height: 28px; background: #2563eb; color: white; border-radius: 50%; font-weight: bold; font-size: 0.9rem; }
+        .quote-box { background: #1e3a8a; color: white; padding: 40px; border-radius: 12px; }
+        .quote-box h3 { font-size: 1.6rem; font-weight: 600; margin-bottom: 16px; }
+        .quote-box a { display: inline-block; font-size: 2rem; color: #fbbf24; font-weight: 700; text-decoration: none; }
+        
+        /* Testimonials */
+        .testimonials { padding: 100px 0; background: #1e3a8a; color: white; }
+        .testimonial-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(340px, 1fr)); gap: 32px; }
+        .testimonial { background: rgba(255,255,255,0.1); padding: 40px; border-radius: 12px; }
+        
+        /* Contact */
+        .contact { padding: 100px 0; text-align: center; background: linear-gradient(180deg, #f8fafc 0%, #ffffff 100%); }
+        .contact h2 { color: #1e3a8a; font-size: 2.5rem; font-weight: 700; margin-bottom: 40px; }
+        .contact-info { font-size: 1.2rem; margin-bottom: 32px; }
+        .contact-info p { margin: 12px 0; color: #475569; }
+        .contact-info strong { color: #1e3a8a; }
+        .contact-info a { color: #2563eb; font-size: 1.5rem; font-weight: 700; text-decoration: none; }
+        
+        /* Footer */
+        footer { background: #0f172a; color: white; padding: 50px 0 30px; text-align: center; }
+        footer p { opacity: 0.7; font-size: 0.95rem; }
+        
+        @media (max-width: 768px) {
+            header h1 { font-size: 2.2rem; }
+            .about-content { grid-template-columns: 1fr; }
+            .service-grid { grid-template-columns: 1fr; }
+            .cta-container { flex-direction: column; }
+            .cta-btn { width: 100%; justify-content: center; }
+            .trust-signals { flex-direction: column; gap: 15px; }
+        }
+    </style>
+</head>
+<body>
+    <!-- Demo Notice -->
+    <div class="demo-notice">
+        This is a <strong>FREE DEMO WEBSITE</strong> for Style Studio Hair Salon. To activate your professional website, 
+        contact <a href="tel:+27727346573">ON-SET DIGITAL</a>
+    </div>
+    
+    <!-- Header -->
+    <header>
+        <div class="container">
+            <h1>Style Studio Hair Salon</h1>
+            <p>Professional Hair Salons in Durban</p>
+            
+            <!-- Trust Signals -->
+            <div class="trust-signals">
+                <div class="trust-item">⭐⭐⭐⭐⭐ 5-Star Rated</div>
+                <div class="trust-item">✓ Fully Insured</div>
+                <div class="trust-item">⚡ Same Day Service</div>
+                <div class="trust-item">📍 Durban</div>
+            </div>
+            
+            <div class="cta-container">
+                <a href="tel:031 777 8888" class="cta-btn cta-phone">📞 031 777 8888</a>
+                <a href="https://wa.me/0317778888" class="cta-btn cta-whatsapp">💬 WhatsApp</a>
+            </div>
+        </div>
+    </header>
+    
+    <!-- Services -->
+    <section class="services">
+        <div class="container">
+            <div class="section-header">
+                <h2>Our Services</h2>
+                <p>Professional solutions for all your needs</p>
+            </div>
+            <div class="service-grid">
+                <div class="service-card">
+                    <div class="service-icon">💇</div>
+                    <h3>Hair Styling</h3>
+                    <p>Cuts, styling, and treatments</p>
+                </div>
+                <div class="service-card">
+                    <div class="service-icon">🎨</div>
+                    <h3>Colour & Highlights</h3>
+                    <p>Professional colouring services</p>
+                </div>
+                <div class="service-card">
+                    <div class="service-icon">👰</div>
+                    <h3>Bridal Packages</h3>
+                    <p>Wedding and special event styling</p>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <!-- About -->
+    <section class="about">
+        <div class="container">
+            <div class="about-content">
+                <div>
+                    <h2>Why Choose Us?</h2>
+                    <p>We are a trusted local hair salons serving Durban and surrounding areas. 
+                    With years of experience, we deliver quality workmanship on every project.</p>
+                    <div class="checklist">
+                        <div class="checklist-item">Fully qualified and insured</div>
+                        <div class="checklist-item">Competitive local rates</div>
+                        <div class="checklist-item">Reliable and punctual service</div>
+                        <div class="checklist-item">Satisfaction guaranteed</div>
+                    </div>
+                </div>
+                <div class="quote-box">
+                    <h3>Get Your Free Quote Today!</h3>
+                    <p>Call now and speak directly with us</p>
+                    <a href="tel:031 777 8888">031 777 8888</a>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <!-- Testimonials -->
+    <section class="testimonials">
+        <div class="container">
+            <div class="section-header">
+                <h2>What Our Customers Say</h2>
+            </div>
+            <div class="testimonial-grid">
+                <div class="testimonial">
+                    <p>"Best service I have had in years. Highly professional team."</p>
+                    <div class="testimonial-author">— Michael B., Durban</div>
+                </div>
+                <div class="testimonial">
+                    <p>"Quick response time and quality work. Very happy with the results."</p>
+                    <div class="testimonial-author">— Thabo K., Pretoria</div>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <!-- Contact -->
+    <section class="contact" id="contact">
+        <div class="container">
+            <h2>Contact Us</h2>
+            <div class="contact-info">
+                <p><strong>Style Studio Hair Salon</strong></p>
+                <p>📍 321 Beach Road, Durban</p>
+                <p>📞 <a href="tel:031 777 8888">031 777 8888</a></p>
+                <p>💬 <a href="https://wa.me/0317778888">WhatsApp</a></p>
+            </div>
+            <div class="cta-container">
+                <a href="tel:031 777 8888" class="cta-btn cta-phone">Call Now</a>
+                <a href="https://wa.me/0317778888" class="cta-btn cta-whatsapp">WhatsApp Us</a>
+            </div>
+        </div>
+    </section>
+    
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <p>&copy; 2026 Style Studio Hair Salon. All rights reserved.</p>
+            <p style="margin-top: 8px; opacity: 0.6;">Professional hair salons in Durban</p>
+        </div>
+    </footer>
+</body>
+</html>
